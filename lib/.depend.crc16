@@ -1,0 +1,8 @@
+crc16.o: crc16.c \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/crc.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/linux/types.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/linux/posix_types.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/linux/stddef.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/asm/posix_types.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/asm/types.h \
+ /home/rakeshgarg/cavium/tools/tools-141023/bin/../lib/gcc/mips64-octeon-linux-gnu/4.7.0/include/stdbool.h

@@ -1,0 +1,24 @@
+fdt.o: fdt.c \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/libfdt_env.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/compiler.h \
+ /home/rakeshgarg/cavium/tools/tools-141023/bin/../lib/gcc/mips64-octeon-linux-gnu/4.7.0/include/stddef.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/linux/string.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/linux/types.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/linux/posix_types.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/linux/stddef.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/asm/posix_types.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/asm/types.h \
+ /home/rakeshgarg/cavium/tools/tools-141023/bin/../lib/gcc/mips64-octeon-linux-gnu/4.7.0/include/stdbool.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/asm/string.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/linux/linux_string.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/asm/byteorder.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/linux/byteorder/big_endian.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/linux/compiler.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/linux/compiler-gcc.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/linux/compiler-gcc4.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/linux/byteorder/swab.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/linux/byteorder/generic.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/linux/types.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/fdt.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/libfdt.h \
+ libfdt_internal.h

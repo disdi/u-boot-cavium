@@ -1,0 +1,600 @@
+
+Allocating common symbols
+Common symbol       size              file
+
+___strtok           0x4               string.o
+
+Discarded input sections
+
+ .reginfo       0x0000000000000000       0x18 crt0.o
+ .reginfo       0x0000000000000000       0x18 demo.o
+ .comment       0x0000000000000000       0x36 demo.o
+ .gnu.attributes
+                0x0000000000000000       0x10 demo.o
+ .eh_frame      0x0000000000000000      0x114 demo.o
+ .reginfo       0x0000000000000000       0x18 glue.o
+ .comment       0x0000000000000000       0x36 glue.o
+ .gnu.attributes
+                0x0000000000000000       0x10 glue.o
+ .eh_frame      0x0000000000000000      0x2a8 glue.o
+ .reginfo       0x0000000000000000       0x18 libgenwrap.o
+ .comment       0x0000000000000000       0x36 libgenwrap.o
+ .gnu.attributes
+                0x0000000000000000       0x10 libgenwrap.o
+ .eh_frame      0x0000000000000000       0xb8 libgenwrap.o
+ .reginfo       0x0000000000000000       0x18 octeon.o
+ .comment       0x0000000000000000       0x36 octeon.o
+ .gnu.attributes
+                0x0000000000000000       0x10 octeon.o
+ .eh_frame      0x0000000000000000       0xa8 octeon.o
+ .reginfo       0x0000000000000000       0x18 crc32.o
+ .comment       0x0000000000000000       0x36 crc32.o
+ .gnu.attributes
+                0x0000000000000000       0x10 crc32.o
+ .reginfo       0x0000000000000000       0x18 ctype.o
+ .comment       0x0000000000000000       0x36 ctype.o
+ .gnu.attributes
+                0x0000000000000000       0x10 ctype.o
+ .reginfo       0x0000000000000000       0x18 div64.o
+ .comment       0x0000000000000000       0x36 div64.o
+ .gnu.attributes
+                0x0000000000000000       0x10 div64.o
+ .eh_frame      0x0000000000000000       0x28 div64.o
+ .reginfo       0x0000000000000000       0x18 string.o
+ .comment       0x0000000000000000       0x36 string.o
+ .gnu.attributes
+                0x0000000000000000       0x10 string.o
+ .eh_frame      0x0000000000000000      0x250 string.o
+ .reginfo       0x0000000000000000       0x18 time.o
+ .comment       0x0000000000000000       0x36 time.o
+ .gnu.attributes
+                0x0000000000000000       0x10 time.o
+ .eh_frame      0x0000000000000000       0xf4 time.o
+ .reginfo       0x0000000000000000       0x18 vsprintf.o
+ .comment       0x0000000000000000       0x36 vsprintf.o
+ .gnu.attributes
+                0x0000000000000000       0x10 vsprintf.o
+ .eh_frame      0x0000000000000000      0x260 vsprintf.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x00000000d0000000                PROVIDE (__executable_start, 0xd0000000)
+                0x00000000d0000000                . = 0xd0000000
+                0x00000000d0000000                . = ALIGN (0x4)
+                0x00000000d0000000                __text_start = .
+
+.text           0x00000000d0000000     0x34bc
+ *(.text)
+ .text          0x00000000d0000000      0x270 crt0.o
+                0x00000000d0000000                _start
+                0x00000000d000024c                syscall
+                0x00000000d0000260                syscall_ptr
+                0x00000000d0000264                search_hint
+ .text          0x00000000d0000270        0x0 demo.o
+ .text          0x00000000d0000270        0x0 glue.o
+ .text          0x00000000d0000270        0x0 libgenwrap.o
+ .text          0x00000000d0000270        0x0 octeon.o
+ .text          0x00000000d0000270        0x0 crc32.o
+ .text          0x00000000d0000270        0x0 ctype.o
+ .text          0x00000000d0000270        0x0 div64.o
+ .text          0x00000000d0000270        0x0 string.o
+ .text          0x00000000d0000270        0x0 time.o
+ .text          0x00000000d0000270        0x0 vsprintf.o
+ *(.text.*)
+ .text.test_dump_sig
+                0x00000000d0000270       0x58 demo.o
+                0x00000000d0000270                test_dump_sig
+ .text.test_dump_si
+                0x00000000d00002c8      0x15c demo.o
+                0x00000000d00002c8                test_dump_si
+ .text.test_dump_buf
+                0x00000000d0000424      0x110 demo.o
+                0x00000000d0000424                test_dump_buf
+ .text.test_dump_di
+                0x00000000d0000534      0x178 demo.o
+                0x00000000d0000534                test_dump_di
+ .text.startup.main
+                0x00000000d00006ac      0x638 demo.o
+                0x00000000d00006ac                main
+ .text.dev_net_valid
+                0x00000000d0000ce4       0x40 glue.o
+ .text.api_search_sig
+                0x00000000d0000d24       0xfc glue.o
+                0x00000000d0000d24                api_search_sig
+ .text.ub_getc  0x00000000d0000e20       0x30 glue.o
+                0x00000000d0000e20                ub_getc
+ .text.ub_tstc  0x00000000d0000e50       0x30 glue.o
+                0x00000000d0000e50                ub_tstc
+ .text.ub_putc  0x00000000d0000e80       0x28 glue.o
+                0x00000000d0000e80                ub_putc
+ .text.ub_puts  0x00000000d0000ea8       0x10 glue.o
+                0x00000000d0000ea8                ub_puts
+ .text.ub_reset
+                0x00000000d0000eb8        0xc glue.o
+                0x00000000d0000eb8                ub_reset
+ .text.ub_get_sys_info
+                0x00000000d0000ec4       0x80 glue.o
+                0x00000000d0000ec4                ub_get_sys_info
+ .text.ub_udelay
+                0x00000000d0000f44       0x28 glue.o
+                0x00000000d0000f44                ub_udelay
+ .text.ub_get_timer
+                0x00000000d0000f6c       0x38 glue.o
+                0x00000000d0000f6c                ub_get_timer
+ .text.ub_dev_get
+                0x00000000d0000fa4       0x28 glue.o
+                0x00000000d0000fa4                ub_dev_get
+ .text.ub_dev_enum
+                0x00000000d0000fcc       0xa4 glue.o
+                0x00000000d0000fcc                ub_dev_enum
+ .text.ub_dev_open
+                0x00000000d0001070       0x54 glue.o
+                0x00000000d0001070                ub_dev_open
+ .text.ub_dev_close
+                0x00000000d00010c4       0x50 glue.o
+                0x00000000d00010c4                ub_dev_close
+ .text.ub_dev_read
+                0x00000000d0001114       0xb0 glue.o
+                0x00000000d0001114                ub_dev_read
+ .text.ub_dev_recv
+                0x00000000d00011c4       0x9c glue.o
+                0x00000000d00011c4                ub_dev_recv
+ .text.ub_dev_send
+                0x00000000d0001260       0x78 glue.o
+                0x00000000d0001260                ub_dev_send
+ .text.ub_env_get
+                0x00000000d00012d8       0x34 glue.o
+                0x00000000d00012d8                ub_env_get
+ .text.ub_env_set
+                0x00000000d000130c       0x14 glue.o
+                0x00000000d000130c                ub_env_set
+ .text.ub_env_enum
+                0x00000000d0001320       0x9c glue.o
+                0x00000000d0001320                ub_env_enum
+ .text.ub_display_get_info
+                0x00000000d00013bc       0x3c glue.o
+                0x00000000d00013bc                ub_display_get_info
+ .text.ub_display_draw_bitmap
+                0x00000000d00013f8       0x44 glue.o
+                0x00000000d00013f8                ub_display_draw_bitmap
+ .text.ub_display_clear
+                0x00000000d000143c        0xc glue.o
+                0x00000000d000143c                ub_display_clear
+ .text.printf   0x00000000d0001448       0x54 libgenwrap.o
+                0x00000000d0001448                printf
+ .text.vprintf  0x00000000d000149c       0x38 libgenwrap.o
+                0x00000000d000149c                vprintf
+ .text.putc     0x00000000d00014d4        0x8 libgenwrap.o
+                0x00000000d00014d4                putc
+ .text.__udelay
+                0x00000000d00014dc        0x8 libgenwrap.o
+                0x00000000d00014dc                __udelay
+ .text.do_reset
+                0x00000000d00014e4       0x20 libgenwrap.o
+                0x00000000d00014e4                do_reset
+ .text.malloc   0x00000000d0001504        0x8 libgenwrap.o
+                0x00000000d0001504                malloc
+ .text.hang     0x00000000d000150c        0x8 libgenwrap.o
+                0x00000000d000150c                hang
+ .text.memset   0x00000000d0001514       0x80 octeon.o
+                0x00000000d0001514                memset
+ .text.memcpy   0x00000000d0001594       0x78 octeon.o
+                0x00000000d0001594                memcpy
+ .text.memcmp   0x00000000d000160c       0x34 octeon.o
+                0x00000000d000160c                memcmp
+ .text.crc32_no_comp
+                0x00000000d0001640       0x8c octeon.o
+                0x00000000d0001640                crc32_no_comp
+ .text.crc32    0x00000000d00016cc       0x20 octeon.o
+                0x00000000d00016cc                crc32
+ .text.hw_watchdog_reset
+                0x00000000d00016ec       0x90 octeon.o
+                0x00000000d00016ec                hw_watchdog_reset
+ .text.get_tbclk
+                0x00000000d000177c        0x8 octeon.o
+                0x00000000d000177c                get_tbclk
+ .text.__div64_32
+                0x00000000d0001784       0x7c div64.o
+                0x00000000d0001784                __div64_32
+ .text.strncasecmp
+                0x00000000d0001800       0x90 string.o
+                0x00000000d0001800                strncasecmp
+ .text.strcasecmp
+                0x00000000d0001890        0x8 string.o
+                0x00000000d0001890                strcasecmp
+ .text.strcpy   0x00000000d0001898       0x24 string.o
+                0x00000000d0001898                strcpy
+ .text.strncpy  0x00000000d00018bc       0x2c string.o
+                0x00000000d00018bc                strncpy
+ .text.strcat   0x00000000d00018e8       0x3c string.o
+                0x00000000d00018e8                strcat
+ .text.strncat  0x00000000d0001924       0x5c string.o
+                0x00000000d0001924                strncat
+ .text.strcmp   0x00000000d0001980       0x2c string.o
+                0x00000000d0001980                strcmp
+ .text.strncmp  0x00000000d00019ac       0x40 string.o
+                0x00000000d00019ac                strncmp
+ .text.strchr   0x00000000d00019ec       0x34 string.o
+                0x00000000d00019ec                strchr
+ .text.strlen   0x00000000d0001a20       0x24 string.o
+                0x00000000d0001a20                strlen
+ .text.strrchr  0x00000000d0001a44       0x58 string.o
+                0x00000000d0001a44                strrchr
+ .text.strnlen  0x00000000d0001a9c       0x30 string.o
+                0x00000000d0001a9c                strnlen
+ .text.strdup   0x00000000d0001acc       0x60 string.o
+                0x00000000d0001acc                strdup
+ .text.strspn   0x00000000d0001b2c       0x44 string.o
+                0x00000000d0001b2c                strspn
+ .text.strpbrk  0x00000000d0001b70       0x3c string.o
+                0x00000000d0001b70                strpbrk
+ .text.strtok   0x00000000d0001bac       0xa0 string.o
+                0x00000000d0001bac                strtok
+ .text.strsep   0x00000000d0001c4c       0x50 string.o
+                0x00000000d0001c4c                strsep
+ .text.strswab  0x00000000d0001c9c       0x50 string.o
+                0x00000000d0001c9c                strswab
+ .text.bcopy    0x00000000d0001cec       0x2c string.o
+                0x00000000d0001cec                bcopy
+ .text.memmove  0x00000000d0001d18       0x74 string.o
+                0x00000000d0001d18                memmove
+ .text.memscan  0x00000000d0001d8c       0x24 string.o
+                0x00000000d0001d8c                memscan
+ .text.strstr   0x00000000d0001db0       0x98 string.o
+                0x00000000d0001db0                strstr
+ .text.memchr   0x00000000d0001e48       0x34 string.o
+                0x00000000d0001e48                memchr
+ .text.memchr_inv
+                0x00000000d0001e7c      0x114 string.o
+                0x00000000d0001e7c                memchr_inv
+ .text.tick_to_time
+                0x00000000d0001f90       0x68 time.o
+ .text.get_ticks
+                0x00000000d0001ff8       0x50 time.o
+                0x00000000d0001ff8                get_ticks
+ .text.get_timer
+                0x00000000d0002048       0x34 time.o
+                0x00000000d0002048                get_timer
+ .text.timer_get_us
+                0x00000000d000207c       0x2c time.o
+                0x00000000d000207c                timer_get_us
+ .text.__udelay
+                0x00000000d00020a8       0x94 time.o
+ .text.udelay   0x00000000d000213c       0x68 time.o
+                0x00000000d000213c                udelay
+ .text.mdelay   0x00000000d00021a4       0x34 time.o
+                0x00000000d00021a4                mdelay
+ .text.put_dec_trunc
+                0x00000000d00021d8      0x100 vsprintf.o
+ .text.put_dec  0x00000000d00022d8      0x17c vsprintf.o
+ .text.string.isra.0
+                0x00000000d0002454       0xdc vsprintf.o
+ .text.number.isra.4
+                0x00000000d0002530      0x2b4 vsprintf.o
+ .text.vsnprintf_internal.isra.6
+                0x00000000d00027e4      0x730 vsprintf.o
+ .text.simple_strtoul
+                0x00000000d0002f14       0xec vsprintf.o
+                0x00000000d0002f14                simple_strtoul
+ .text.strict_strtoul
+                0x00000000d0003000       0xa0 vsprintf.o
+                0x00000000d0003000                strict_strtoul
+ .text.simple_strtol
+                0x00000000d00030a0       0x3c vsprintf.o
+                0x00000000d00030a0                simple_strtol
+ .text.ustrtoul
+                0x00000000d00030dc       0x98 vsprintf.o
+                0x00000000d00030dc                ustrtoul
+ .text.simple_strtoull
+                0x00000000d0003174       0xf0 vsprintf.o
+                0x00000000d0003174                simple_strtoull
+ .text.ustrtoull
+                0x00000000d0003264       0x98 vsprintf.o
+                0x00000000d0003264                ustrtoull
+ .text.vsprintf
+                0x00000000d00032fc        0x8 vsprintf.o
+                0x00000000d00032fc                vsprintf
+ .text.sprintf  0x00000000d0003304       0x38 vsprintf.o
+                0x00000000d0003304                sprintf
+ .text.panic    0x00000000d000333c       0x60 vsprintf.o
+                0x00000000d000333c                panic
+ .text.__assert_fail
+                0x00000000d000339c       0x18 vsprintf.o
+                0x00000000d000339c                __assert_fail
+ .text.simple_itoa
+                0x00000000d00033b4       0x54 vsprintf.o
+                0x00000000d00033b4                simple_itoa
+ .text.print_grouped_ull
+                0x00000000d0003408       0xb4 vsprintf.o
+                0x00000000d0003408                print_grouped_ull
+ *(.data_in_text.*)
+                0x00000000d00034bc                __text_end = .
+                0x00000000d00034c0                . = ALIGN (0x8)
+                0x00000000d00034c0                __ro_data_start = .
+
+.rodata         0x00000000d00034c0      0x7d8
+ *(SORT(.rodata*))
+ .rodata.__func__.4486
+                0x00000000d00034c0        0x8 demo.o
+ .rodata._ctype
+                0x00000000d00034c8      0x100 ctype.o
+                0x00000000d00034c8                _ctype
+ .rodata.digits.4459
+                0x00000000d00035c8       0x10 vsprintf.o
+ .rodata.hex_asc
+                0x00000000d00035d8       0x18 vsprintf.o
+ .rodata.str1.8
+                0x00000000d00035f0      0x653 demo.o
+                                        0x660 (size before relaxing)
+ *fill*         0x00000000d0003c43        0x5 
+ .rodata.str1.8
+                0x00000000d0003c48        0x9 glue.o
+                                         0x10 (size before relaxing)
+ *fill*         0x00000000d0003c51        0x7 
+ .rodata.str1.8
+                0x00000000d0003c58       0x40 vsprintf.o
+                0x00000000d0003c98                __ro_data_end = .
+                0x00000000d0003c98                . = ALIGN (0x8)
+                0x00000000d0003c98                __data_start = .
+
+.data           0x00000000d0003ca0        0x0
+ *(.data)
+ .data          0x00000000d0003ca0        0x0 crt0.o
+ .data          0x00000000d0003ca0        0x0 demo.o
+ .data          0x00000000d0003ca0        0x0 glue.o
+ .data          0x00000000d0003ca0        0x0 libgenwrap.o
+ .data          0x00000000d0003ca0        0x0 octeon.o
+ .data          0x00000000d0003ca0        0x0 crc32.o
+ .data          0x00000000d0003ca0        0x0 ctype.o
+ .data          0x00000000d0003ca0        0x0 div64.o
+ .data          0x00000000d0003ca0        0x0 string.o
+ .data          0x00000000d0003ca0        0x0 time.o
+ .data          0x00000000d0003ca0        0x0 vsprintf.o
+                0x00000000d0003ca0                __data_end = .
+                0x00000000d0003ca0                . = .
+                0x00000000d0003ca0                _gp = ALIGN (0x10)
+                0x00000000d0003ca0                . = ALIGN (0x10)
+                0x00000000d0003ca0                __got_start = .
+
+.got
+ *(.got)
+                0x00000000d0003ca0                __got_end = .
+                0x00000000d0003ca0                . = ALIGN (0x8)
+                0x00000000d0003ca0                __sdata_start = .
+
+.sdata
+ *(.sdata)
+                0x00000000d0003ca0                __sdata_end = .
+                0x00000000d0003ca0                . = ALIGN (0x8)
+                0x00000000d0003ca0                __bss_start = .
+
+.sbss
+ *(.sbss)
+
+.bss            0x00000000d0003ca0        0x4
+ *(.bss)
+ .bss           0x00000000d0003ca0        0x0 crt0.o
+ .bss           0x00000000d0003ca0        0x0 demo.o
+ .bss           0x00000000d0003ca0        0x0 glue.o
+ .bss           0x00000000d0003ca0        0x0 libgenwrap.o
+ .bss           0x00000000d0003ca0        0x0 octeon.o
+ .bss           0x00000000d0003ca0        0x0 crc32.o
+ .bss           0x00000000d0003ca0        0x0 ctype.o
+ .bss           0x00000000d0003ca0        0x0 div64.o
+ .bss           0x00000000d0003ca0        0x0 string.o
+ .bss           0x00000000d0003ca0        0x0 time.o
+ .bss           0x00000000d0003ca0        0x0 vsprintf.o
+                0x00000000d0003ca0                . = ALIGN (0x10)
+ COMMON         0x00000000d0003ca0        0x4 string.o
+                0x00000000d0003ca0                ___strtok
+                0x00000000d0003ca4                __bss_end = .
+
+.bss.buf        0x00000000d0003ca8      0x800
+ .bss.buf       0x00000000d0003ca8      0x800 demo.o
+
+.bss.si         0x00000000d00044a8       0x18
+ .bss.si        0x00000000d00044a8       0x18 glue.o
+
+.bss.mr         0x00000000d00044c0       0x40
+ .bss.mr        0x00000000d00044c0       0x40 glue.o
+
+.bss.devices    0x00000000d0004500       0x78
+ .bss.devices   0x00000000d0004500       0x78 glue.o
+
+.bss.env_name   0x00000000d0004578      0x100
+ .bss.env_name  0x00000000d0004578      0x100 glue.o
+
+.bss.local.4639
+                0x00000000d0004678       0x18
+ .bss.local.4639
+                0x00000000d0004678       0x18 vsprintf.o
+                0x00000000d0004690                . = ALIGN (0x8)
+                0x00000000d0004690                _end = .
+
+/DISCARD/
+ *(.eh_frame)
+ *(.reginfo)
+ *(.comment)
+ *(.gnu.attributes)
+Address of section .text set to 0xd0000000
+LOAD crt0.o
+LOAD demo.o
+LOAD glue.o
+LOAD libgenwrap.o
+LOAD octeon.o
+LOAD crc32.o
+LOAD ctype.o
+LOAD div64.o
+LOAD string.o
+LOAD time.o
+LOAD vsprintf.o
+LOAD /home/rakeshgarg/cavium/tools/tools-141023/bin/../lib/gcc/mips64-octeon-linux-gnu/4.7.0/n32/libgcc.a
+OUTPUT(demo elf32-ntradbigmips)
+
+.pdr            0x0000000000000000      0xba0
+ .pdr           0x0000000000000000       0x40 crt0.o
+ .pdr           0x0000000000000040       0xa0 demo.o
+ .pdr           0x00000000000000e0      0x2e0 glue.o
+ .pdr           0x00000000000003c0       0xe0 libgenwrap.o
+ .pdr           0x00000000000004a0       0xe0 octeon.o
+ .pdr           0x0000000000000580        0x0 crc32.o
+ .pdr           0x0000000000000580        0x0 ctype.o
+ .pdr           0x0000000000000580       0x20 div64.o
+ .pdr           0x00000000000005a0      0x300 string.o
+ .pdr           0x00000000000008a0       0xe0 time.o
+ .pdr           0x0000000000000980      0x220 vsprintf.o
+
+.mdebug.abiN32  0x0000000000000000        0x0
+ .mdebug.abiN32
+                0x0000000000000000        0x0 demo.o
+ .mdebug.abiN32
+                0x0000000000000000        0x0 glue.o
+ .mdebug.abiN32
+                0x0000000000000000        0x0 libgenwrap.o
+ .mdebug.abiN32
+                0x0000000000000000        0x0 octeon.o
+ .mdebug.abiN32
+                0x0000000000000000        0x0 crc32.o
+ .mdebug.abiN32
+                0x0000000000000000        0x0 ctype.o
+ .mdebug.abiN32
+                0x0000000000000000        0x0 div64.o
+ .mdebug.abiN32
+                0x0000000000000000        0x0 string.o
+ .mdebug.abiN32
+                0x0000000000000000        0x0 time.o
+ .mdebug.abiN32
+                0x0000000000000000        0x0 vsprintf.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 demo.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 glue.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 libgenwrap.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 octeon.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 crc32.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ctype.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 div64.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 string.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 time.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 vsprintf.o
+
+.debug_line     0x0000000000000000     0x1f90
+ .debug_line    0x0000000000000000       0x52 crt0.o
+ .debug_line    0x0000000000000052      0x383 demo.o
+ .debug_line    0x00000000000003d5      0x42d glue.o
+ .debug_line    0x0000000000000802      0x253 libgenwrap.o
+ .debug_line    0x0000000000000a55      0x2fa octeon.o
+ .debug_line    0x0000000000000d4f      0x111 crc32.o
+ .debug_line    0x0000000000000e60       0x5a ctype.o
+ .debug_line    0x0000000000000eba      0x110 div64.o
+ .debug_line    0x0000000000000fca      0x4eb string.o
+ .debug_line    0x00000000000014b5      0x2fb time.o
+ .debug_line    0x00000000000017b0      0x7e0 vsprintf.o
+
+.debug_info     0x0000000000000000     0x6e66
+ .debug_info    0x0000000000000000       0x64 crt0.o
+ .debug_info    0x0000000000000064     0x14c1 demo.o
+ .debug_info    0x0000000000001525     0x1246 glue.o
+ .debug_info    0x000000000000276b      0x760 libgenwrap.o
+ .debug_info    0x0000000000002ecb      0x7fa octeon.o
+ .debug_info    0x00000000000036c5      0x37e crc32.o
+ .debug_info    0x0000000000003a43       0x4f ctype.o
+ .debug_info    0x0000000000003a92      0x13f div64.o
+ .debug_info    0x0000000000003bd1      0xe6c string.o
+ .debug_info    0x0000000000004a3d      0xc69 time.o
+ .debug_info    0x00000000000056a6     0x17c0 vsprintf.o
+
+.debug_abbrev   0x0000000000000000     0x188b
+ .debug_abbrev  0x0000000000000000       0x14 crt0.o
+ .debug_abbrev  0x0000000000000014      0x320 demo.o
+ .debug_abbrev  0x0000000000000334      0x3f2 glue.o
+ .debug_abbrev  0x0000000000000726      0x23d libgenwrap.o
+ .debug_abbrev  0x0000000000000963      0x2ca octeon.o
+ .debug_abbrev  0x0000000000000c2d       0xdf crc32.o
+ .debug_abbrev  0x0000000000000d0c       0x43 ctype.o
+ .debug_abbrev  0x0000000000000d4f       0xa7 div64.o
+ .debug_abbrev  0x0000000000000df6      0x355 string.o
+ .debug_abbrev  0x000000000000114b      0x2af time.o
+ .debug_abbrev  0x00000000000013fa      0x491 vsprintf.o
+
+.debug_aranges  0x0000000000000000      0x3e8
+ .debug_aranges
+                0x0000000000000000       0x20 crt0.o
+ .debug_aranges
+                0x0000000000000020       0x40 demo.o
+ .debug_aranges
+                0x0000000000000060       0xd0 glue.o
+ .debug_aranges
+                0x0000000000000130       0x50 libgenwrap.o
+ .debug_aranges
+                0x0000000000000180       0x50 octeon.o
+ .debug_aranges
+                0x00000000000001d0       0x18 crc32.o
+ .debug_aranges
+                0x00000000000001e8       0x18 ctype.o
+ .debug_aranges
+                0x0000000000000200       0x20 div64.o
+ .debug_aranges
+                0x0000000000000220       0xd8 string.o
+ .debug_aranges
+                0x00000000000002f8       0x50 time.o
+ .debug_aranges
+                0x0000000000000348       0xa0 vsprintf.o
+
+.debug_loc      0x0000000000000000     0x3f09
+ .debug_loc     0x0000000000000000      0x5de demo.o
+ .debug_loc     0x00000000000005de      0xa98 glue.o
+ .debug_loc     0x0000000000001076      0x1f6 libgenwrap.o
+ .debug_loc     0x000000000000126c      0x36a octeon.o
+ .debug_loc     0x00000000000015d6       0xb6 div64.o
+ .debug_loc     0x000000000000168c      0xb5e string.o
+ .debug_loc     0x00000000000021ea      0x33b time.o
+ .debug_loc     0x0000000000002525     0x19e4 vsprintf.o
+
+.debug_ranges   0x0000000000000000      0x658
+ .debug_ranges  0x0000000000000000       0x30 demo.o
+ .debug_ranges  0x0000000000000030      0x108 glue.o
+ .debug_ranges  0x0000000000000138       0x40 libgenwrap.o
+ .debug_ranges  0x0000000000000178       0x58 octeon.o
+ .debug_ranges  0x00000000000001d0       0x10 div64.o
+ .debug_ranges  0x00000000000001e0       0xf8 string.o
+ .debug_ranges  0x00000000000002d8       0x70 time.o
+ .debug_ranges  0x0000000000000348      0x310 vsprintf.o
+
+.debug_str      0x0000000000000000     0x1120
+ .debug_str     0x0000000000000000      0x4ec demo.o
+                                        0x587 (size before relaxing)
+ .debug_str     0x00000000000004ec      0x1e8 glue.o
+                                        0x6da (size before relaxing)
+ .debug_str     0x00000000000006d4       0xaa libgenwrap.o
+                                        0x3e8 (size before relaxing)
+ .debug_str     0x000000000000077e      0x148 octeon.o
+                                        0x457 (size before relaxing)
+ .debug_str     0x00000000000008c6       0x3a crc32.o
+                                        0x2d1 (size before relaxing)
+ .debug_str     0x0000000000000900       0x41 ctype.o
+                                         0x64 (size before relaxing)
+ .debug_str     0x0000000000000941       0x50 div64.o
+                                        0x119 (size before relaxing)
+ .debug_str     0x0000000000000991      0x141 string.o
+                                        0x42c (size before relaxing)
+ .debug_str     0x0000000000000ad2      0x44b time.o
+                                        0x7d1 (size before relaxing)
+ .debug_str     0x0000000000000f1d      0x203 vsprintf.o
+                                        0x5b5 (size before relaxing)

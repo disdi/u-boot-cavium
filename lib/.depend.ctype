@@ -1,0 +1,2 @@
+ctype.o: ctype.c \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/linux/ctype.h

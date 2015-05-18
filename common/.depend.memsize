@@ -1,0 +1,10 @@
+memsize.o: memsize.c \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/config.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/config_cmd_defaults.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/config_defaults.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/configs/octeon_sim.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/configs/octeon_common.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/configs/octeon_cmd_conf.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/config_cmd_default.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/asm/config.h \
+ /home/rakeshgarg/cavium/sdk/bootloader/u-boot/include/config_fallbacks.h

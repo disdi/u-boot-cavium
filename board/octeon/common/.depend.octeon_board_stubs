@@ -1,0 +1,1 @@
+octeon_board_stubs.o: octeon_board_stubs.c
